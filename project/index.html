@@ -14,37 +14,50 @@
 
     <link rel="stylesheet" href="style.css" media="screen">
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
   </head>
 
   <body>
 
-    <header>
-      <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
+  <div class="header">
+    <div class="container">
+      <div class="webtitle">
+    <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
       <a href="#"><h1 class="site-title"><i class="fa fa-times"></i><i class="fa fa-dot-circle-o"></i> Game</h1></a>
-
+      </div>
+    </div>
+  </div>
+      
+    <div class="nav1">
       <nav class="navbar">
-        <ul class="navlist">
+        <ul class="nav nav-pills nav-stacked">
           <li class="navitem navlink active"><a href="#">Home</a></li>
           <li class="navitem navlink"><a href="#">Profile</a></li>
           <li class="navitem navlink"><a href="#">Leaderboard</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+    
+    <div class="nav2">
+      <nav class="navbar2">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="navitem navlink"><img src="download.png" alt="Smiley face" height="42" width="42"></li>
+          <li class="navitem navlink"><a href="#">Username</a></li>
+          <li class="navitem navlink"><a href="#">Score</a></li>
 
-    <nav class="navbar2">
-      <ul class="navlist">
-          <li class="navitem navlink"><img src="download.png" alt="Smiley face" height="42" width="42"></li>
-        <li class="navitem navlink"><a href="#">Username</a></li>
-        <li class="navitem navlink"><a href="#">Score</a></li>
+        </ul>
+      </nav>
+    </div>
 
-      </ul>
-    </nav>
-  </header>
+      <!-- <div class = "bodytitle">
+        <p class="lead">Choose a Game</p>
+      </div> -->
 
-
-        <div class = "bodytitle">
-          Choose a Game
-        </div>
       <div class="twit-container">
       <article class="twit">
           <img src="download.png" alt="Smiley face" height="200" width="200">
@@ -57,6 +70,8 @@
 
     </div>
 
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
   </body>

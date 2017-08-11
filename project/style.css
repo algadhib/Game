@@ -1,0 +1,91 @@
+body{
+  color: red;
+  width: 100%;
+  margin: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  margin: 0 auto;
+}
+
+.site-title{
+  font-size: 40px;
+  color: #D2691E;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+}
+
+.header{
+  background: #2F4F4F;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  font-size: 60px;
+  
+}
+
+.navbar{
+  display: block;
+  /*width: 60px;*/
+  height: 666px;
+  position: fixed !important;
+  float:left;
+  /*background: red;
+  display: flex;
+  position: fixed;
+  height: 666px;
+  margin: 100px;
+  float:left;
+  background: red;
+  color: black;
+  font-family: Roboto, Helvetica, sans-serif;*/
+}
+
+
+
+.navbar2{
+  display: block;
+  /*width: 60px;*/
+  margin: 59.5px 10px 10px 0px;
+  height: 666px;
+  /*position: fixed;*/
+  float:right;
+  /*background: red;*/
+}
+
+.navitem{
+  color: black;
+  display: block;
+}
+
+.navlink{
+  color: black;
+}
+
+
+
+.fa-times{
+  color: #DAA520;
+}
+
+.fa-dot-circle-o{
+  color: #A52A2A;
+}
+
+.twit-container{
+  flex: 0 1 28%;
+  display: flex;
+  margin: 100px;
+  padding: 20px;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.twit{
+  margin: 50px;
+}
