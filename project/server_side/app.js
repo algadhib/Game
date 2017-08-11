@@ -1,7 +1,6 @@
 //init the required packages
 var express = require('express');
 var app = express();
-var twits = require('./twitData.json');
 const exphbs = require('express-handlebars');
 
 //init the view engine
@@ -16,6 +15,7 @@ app.use(express.static('./public'));
 app.get('/', function(req, res, next)  {
    var context = {};             //create the contex obj
    res.status(200);
+   res.render('gamesList.handlebars', context);
 });
 
 //serving the 404 page
