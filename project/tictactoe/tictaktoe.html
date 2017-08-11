@@ -2,42 +2,39 @@
 <html>
   <head>
 
+  <title>Tic Tac Toe</title>
     <meta charset="utf-8">
-
-
-
-
-
     <link rel="stylesheet" href="tictaktoe.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
   </head>
 
   <body>
 
-    <div id="board">
-	        <table>
-	          <tr class="0">
-	            <td id=0 class="square"></td>
-	            <td id=1 class="square"></td>
-	            <td id=2 class="square"></td>
-	          </tr>
-	          <tr class="1">
-	            <td id=0 class="square"></td>
-	            <td id=1 class="square"></td>
-	            <td id=2 class="square"></td>
-	          </tr>
-	          <tr class="2">
-	            <td id=0 class="square"></td>
-	            <td id=1 class="square"></td>
-	            <td id=2 class="square"></td>
-	          </tr>
-	        </table>
-	      </div>
+	<div id="board">
+	    <table class="grid">
+	      <tr class="0">
+	        <td id=0 class="square top-row left-col"></td>
+	        <td id=1 class="square top-row"></td>
+	        <td id=2 class="square top-row right-col"></td>
+	      </tr>
+	      <tr class="1">
+	        <td id=0 class="square left-col"></td>
+	        <td id=1 class="square"></td>
+	        <td id=2 class="square right-col"></td>
+	      </tr>
+	      <tr class="2">
+	        <td id=0 class="square bottom-row left-col"></td>
+	        <td id=1 class="square bottom-row"></td>
+	        <td id=2 class="square bottom-row right-col"></td>
+	      </tr>
+	    </table>
+	</div>
 
-<button type="button" id="playFriend">Play against a friend</button>
-<button type="button" id ="playAI">Play against AI</button>
-<button type="button" id ="reset">reset</button>
-
+	<button type="button" id="playFriend">Play against a friend</button>
+	<button type="button" id ="playAI">Play against AI</button>
+	<button type="button" id ="reset">reset</button>
   </body>
 
   <script src="tictaktoe.js" charset="utf-8"></script>
