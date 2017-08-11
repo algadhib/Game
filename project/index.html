@@ -1,79 +1,77 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Games</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" media="screen">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<html>
-  <head>
-
-    <meta charset="utf-8">
-    <title>Game</title>
-
-    <!-- This is a stylesheet that includes the font you should use -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
-
-    <!-- This is a 3rd-party stylesheet for Font Awesome: http://fontawesome.io/ -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
-
-    <link rel="stylesheet" href="style.css" media="screen">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  </head>
-
-  <body>
-
-  <div class="header">
-    <div class="container">
-      <div class="webtitle">
-    <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
-      <a href="#"><h1 class="site-title"><i class="fa fa-times"></i><i class="fa fa-dot-circle-o"></i> Game</h1></a>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Game</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Leaderboard</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p>This is the profile</p>
+      <img src="download.png" alt="Smiley face" class="img-rounded" height="100" width="100">
+      <form>
+        <div class="form-group">
+          <label for="email">Username:</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Welcome</h1>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="Tic_Tac_Toe.png" alt="Tic_Tac_Toe" height="200" width="200">
+            <div class="caption">
+              <h3>Tic Tac Toe</h3>
+                <p>Play Tic Tac Toe for $9.99</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="Connect4.png" alt="Connect4" height="200" width="200">
+            <div class="caption">
+              <h3>Connect Four</h3>
+                <p>Play Connect Four for $9.99</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-      
-    <div class="nav1">
-      <nav class="navbar">
-        <ul class="nav nav-pills nav-stacked">
-          <li class="navitem navlink active"><a href="#">Home</a></li>
-          <li class="navitem navlink"><a href="#">Profile</a></li>
-          <li class="navitem navlink"><a href="#">Leaderboard</a></li>
-        </ul>
-      </nav>
-    </div>
-    
-    <div class="nav2">
-      <nav class="navbar2">
-        <ul class="nav nav-pills nav-stacked">
-            <li class="navitem navlink"><img src="download.png" alt="Smiley face" height="42" width="42"></li>
-          <li class="navitem navlink"><a href="#">Username</a></li>
-          <li class="navitem navlink"><a href="#">Score</a></li>
+</div>
 
-        </ul>
-      </nav>
-    </div>
+<footer class="container-fluid text-center">
+  <p>All copy rights are reserved to Team FFO &#169</p>
+</footer>
 
-      <!-- <div class = "bodytitle">
-        <p class="lead">Choose a Game</p>
-      </div> -->
-
-      <div class="twit-container">
-      <article class="twit">
-          <img src="download.png" alt="Smiley face" height="200" width="200">
-      </article>
-
-      <article class="twit">
-          <img src="download.png" alt="Smiley face" height="200" width="200">
-      </article>
-
-
-    </div>
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-  </body>
-
+</body>
 </html>
