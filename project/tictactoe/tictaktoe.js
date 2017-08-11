@@ -83,6 +83,9 @@ function AI(){
           buildBoard(x,y);
           checkWinner("X");
       }
+      else {
+        return ;
+      }
 count++;
   if(count == 9){
     alert("Game is over");
