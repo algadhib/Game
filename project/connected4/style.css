@@ -13,10 +13,6 @@ body{
     border-bottom-right-radius: 27px;
 }
 
-div {
-  display: block;
-}
-
 .left-corner{
   border-bottom-left-radius: 20px;
 }
@@ -34,13 +30,6 @@ div {
     border-radius: 60px;
     margin-top: 5px;
     background: #6180A5;
-}
-
-table {
-
-    text-align:center;
-    font: 400 30px/1.5;
-
 }
 
 .col{
@@ -65,7 +54,7 @@ button{
   margin-top: 14px;
   border-radius: 10px;
   border: none;
-  background-color: #37348C; /* Green */
+  background-color: #37348C;
   color: white;
   padding: 15px 9px;
   text-align: center;
