@@ -14,8 +14,17 @@ app.use(express.static('./public'));
 //serving the main page
 app.get('/', function(req, res, next)  {
    var context = {};             //create the contex obj
+   context.registered = false;
    res.status(200);
    res.render('gamesList.handlebars', context);
+});
+
+//serving the main page
+app.get('/tictac', function(req, res, next)  {
+   var context = {};             //create the contex obj
+   context.registered = false;
+   res.status(200);
+   res.render('playGame.handlebars', context);
 });
 
 //serving the 404 page
