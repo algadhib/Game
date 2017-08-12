@@ -1,0 +1,33 @@
+table {
+
+
+
+}
+div {
+  display: block;
+}
+.square{
+    width:100px;
+    height:100px;
+    font-size: 30pt;
+    border-bottom: 1px solid black
+}
+
+
+table {
+
+    text-align:center;
+      font: 400 30px/1.5;
+
+}
+.col{
+  border: 2px solid;
+      display: inline-block;
+      margin: 0;
+}
+.blue{
+  background-color: blue;
+}
+.red{
+  background-color: red;
+}
