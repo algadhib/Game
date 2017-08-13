@@ -274,34 +274,36 @@ var r,c,i,j,z=0;
 
 
 
-        // for(r=0, c=3; r <= 2, c>=0; )  {
-        //    i=r; j=c; win=0;
-        //    ++z;
-        //    while(i<=5 && j<=6){
-        //      console.log('i: '+ i);
-        //      console.log('j: '+ j);
-        //       if(board[i][j] == p)
-        //         win++;
-        //      else win = 0;
-        //
-     	// 	  if(win == 4)   {
-        //     alert(p+" has won! diagnoly2");
-        //     status = true;
-        //     for(let i=0; i<42; i++)  {
-        //       square[i].removeEventListener("click", addXO);
-        //       //square[i].removeEventListener("click", AI);
-        //     }
-     	// 		break;
-        //      }
-        //       i++; j++;
-        //
-        //    }
-        //
-        //    if(z==5 || z==6) ++r;
-        //    if(j=6 && c!=0) --c;
-        //    if(z==7) break;
-        //
-        // }
+        r=0;
+        c=0,i=0,j=0,z=0;
+        for(r=0, c=3; r <= 2, c>=0; )  {
+           i=r; j=c; win=0;
+           ++z;
+           while(i<=5 && j<=6){
+             console.log('i: '+ i);
+             console.log('j: '+ j);
+              if(board[i][j] == p)
+                win++;
+             else win = 0;
+
+     		  if(win == 4)   {
+            alert(p+" has won! diagnoly2");
+            status = true;
+            for(let i=0; i<42; i++)  {
+              square[i].removeEventListener("click", addXO);
+              //square[i].removeEventListener("click", AI);
+            }
+     			break;
+             }
+              i++; j++;
+
+           }
+
+           if(z==5 || z==6) ++r;
+           if(j=6 && c!=0) --c;
+           if(z==7) break;
+
+        }
 
       return status;
 
