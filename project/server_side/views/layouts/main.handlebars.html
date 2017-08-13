@@ -28,6 +28,7 @@
 
 <div class="container-fluid text-center">
   <div class="row content">
+    {{#if showProfile}}
     <div class="col-sm-2 sidenav">
       {{!we need an if statment that will show the profile info if the user
          is logged in other wise it will show the register/login button}}
@@ -49,6 +50,7 @@
       </form>
       {{/if}}
     </div>
+    {{/if}}
     <div class="col-sm-8 text-left">
       {{{body}}}
     </div>
