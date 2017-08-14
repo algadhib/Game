@@ -13,7 +13,7 @@ document.querySelector('.nav').addEventListener('click', active);
 
 function loadtic (){
   var xhr = new XMLHttpRequest();
-  if(xhr.readyState == 0 || xhr.readyState == 4){
+  if(xhr.readyState == 4 && this.status == 200){
     document.getElementById('main').innerHTML = this.responseXML
 
 
@@ -24,7 +24,7 @@ function loadtic (){
 
 function loadconnect(){
   var xhr = new XMLHttpRequest();
-  if(xhr.readyState == 0 || xhr.readyState == 4){
+  if(xhr.readyState == 4 && this.status == 200){
     document.getElementById('main').innerHTML = this.responseXML
 
 

@@ -2,5 +2,9 @@
 
 
    <div class="row-fluid text-center centering">
-      {{>ticTac}}
+      {{#if gameName}}
+         {{>ticTac}}
+      {{else}}
+         {{>connect4}}
+      {{/if}}
    </div>
