@@ -19,14 +19,14 @@
       <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="glyphicon glyphicon-record" aria-hidden="true"></span><span class="game-text">Game</span></a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="#">Leaderboard</a></li>
+      <li class="navitem navlink active"><a href="#">Home</a></li>
+      <li class="navitem navlink"><a href="#">Profile</a></li>
+      <li class="navitem navlink"><a href="#">Leaderboard</a></li>
     </ul>
   </div>
 </nav>
-  
-<div class="container-fluid text-center">    
+
+<div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
       <p>This is the profile</p>
@@ -43,7 +43,10 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
     </div>
-    <div class="col-sm-8 text-left"> 
+    <div id='main'>
+
+
+    <div class="col-sm-8 text-left">
       <h1>Welcome</h1>
       <div class="row">
         <div class="col-sm-6 col-md-4">
@@ -52,7 +55,7 @@
             <div class="caption">
               <h3>Tic Tac Toe</h3>
                 <p>Play Tic Tac Toe for $9.99</p>
-                <p><a href="#" class="btn btn-primary" role="button">Play</a></p>
+                <p><a href="#" class="btn btn-primary playtic" role="button">Play</a></p>
             </div>
           </div>
         </div>
@@ -62,10 +65,11 @@
             <div class="caption">
               <h3>Connect Four</h3>
                 <p>Play Connect Four for $9.99</p>
-                <p><a href="#" class="btn btn-primary" role="button">Play</a></p>
+                <p><a href="#" class="btn btn-primary playconnect" role="button">Play</a></p>
             </div>
           </div>
         </div>
+    </div>
     </div>
   </div>
 </div>
@@ -75,4 +79,5 @@
 </footer>
 
 </body>
+<script src="index.js" charset="utf-8"></script>
 </html>
