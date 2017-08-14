@@ -16,6 +16,7 @@ app.get('/', function(req, res, next)  {
    var context = {};             //create the contex obj
    context.registered = false;
    context.showProfile = true;
+   context.showProfile = true;
    res.status(200);
    res.render('gamesList.handlebars', context);
 });
@@ -26,6 +27,7 @@ app.get('/tictac', function(req, res, next)  {
    context.registered = false;
    context.gameName = true;
    context.showProfile = true;
+   context.showProfile = true;
    res.status(200);
    res.render('playGame.handlebars', context);
 });
@@ -34,6 +36,7 @@ app.get('/connected4', function(req, res, next)  {
    var context = {};             //create the contex obj
    context.registered = false;
    context.gameName = false;
+   context.showProfile = true;
    context.showProfile = true;
    res.status(200);
    res.render('playGame.handlebars', context);
