@@ -1,0 +1,26 @@
+{{! the header of the page}}
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span class="glyphicon glyphicon-record" aria-hidden="true"></span><span class="game-text">Game</span></a>
+    </div>
+    <ul class="nav navbar-nav">
+      {{#if home}}
+         <li class="navitem navlink active"><a href="/">Home</a></li>
+      {{else}}
+         <li class="navitem navlink"><a href="/">Home</a></li>
+      {{/if}}
+      {{#if profile}}
+         <li class="navitem navlink active"><a href="/profile">Profile</a></li>
+      {{else}}
+         <li class="navitem navlink"><a href="/profile">Profile</a></li>
+      {{/if}}
+      {{#if leaderboard}}
+         <li class="navitem navlink active"><a href="/leaderboard">Leaderboard</a></li>
+      {{else}}
+         <li class="navitem navlink"><a href="/leaderboard">Leaderboard</a></li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>

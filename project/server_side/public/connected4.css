@@ -11,6 +11,8 @@ body{
     border: solid;
     border-bottom-left-radius: 27px;
     border-bottom-right-radius: 27px;
+	 margin-left: 29%;
+    margin-top: 5%;
 }
 
 .left-corner{

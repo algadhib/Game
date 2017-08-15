@@ -1,0 +1,38 @@
+body  {
+  padding-top: 50px;
+}
+
+a{
+  color:white !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+
+}
+
+h1{
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+}
+
+table{
+  background: #139E8B;
+  margin: auto;
+}
+
+.table {
+    width: 100%;
+    max-width: 59%;
+    margin-top: 22px;
+}
+
+td, th {
+    /*border: 1px solid #dddddd;*/
+    color: black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
