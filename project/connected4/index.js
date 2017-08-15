@@ -24,10 +24,10 @@ function buildBoard(x,y){
   console.log(x);
   console.log(y);
     if (count%2 == 0){
-    board[x][y] = "blue"
+    board[x][y] = "X"
   }
   else {
-    board[x][y] = "red"
+    board[x][y] = "O"
   }
   //console.log(board);
     for(var i=0; i<6; i++){
@@ -59,7 +59,7 @@ function addXO(){
 
           children[i].classList.add("blue");
           count++;
-          checkWinner('blue');
+          checkWinner('X');
           break;
         }
 
@@ -87,7 +87,7 @@ function addXO(){
           children[i].classList.add("red");
 
           count++;
-          checkWinner('red');
+          checkWinner('O');
           break;
         }
 
@@ -123,7 +123,7 @@ function AI(){
 
           children[i].classList.add("blue");
           count++;
-          checkWinner('blue');
+          checkWinner('X');
           break;
         }
 
@@ -158,7 +158,7 @@ function AI(){
 
           children[i].classList.add("red");
           count++;
-          checkWinner('red');
+          checkWinner('O');
           break;
         }
 
@@ -201,7 +201,6 @@ var r,c,i,j,z=0;
     /*check winner vertically*/
     for(let j=0; j<7; j++) {
        win = 0;
-       if(status != true){
        for(let i=0; i<6; i++)  {
         //  console.log('i: '+ i);
         //  console.log('j: '+ j);
@@ -219,12 +218,10 @@ var r,c,i,j,z=0;
  			break;
          }
      }
-   }
  }
       /*check winner horizontally*/
       for(let j=0; j<6; j++) {
          win = 0;
-        if(status != true){
          for(let i=0; i<7; i++)  {
           //  console.log('i: '+ i);
           //  console.log('j: '+ j);
@@ -242,7 +239,6 @@ var r,c,i,j,z=0;
    			break;
            }
        }
-     }
    }
 
 
@@ -276,39 +272,6 @@ var r,c,i,j,z=0;
 
         }
 
-
-/*Check diagnolly 2*/
-
-        r=0;
-        c=0,i=0,j=0,z=0;
-        for(r=0, c=3; r <= 2, c>=0; )  {
-           i=r; j=c; win=0;
-           ++z;
-           while(i<=5 && j<=6){
-             console.log('i: '+ i);
-             console.log('j: '+ j);
-              if(board[i][j] == p)
-                win++;
-             else win = 0;
-
-     		  if(win == 4)   {
-            alert(p+" has won! diagnoly2");
-            status = true;
-            for(let i=0; i<42; i++)  {
-              square[i].removeEventListener("click", addXO);
-              //square[i].removeEventListener("click", AI);
-            }
-     			break;
-             }
-              i++; j++;
-
-           }
-
-           if(z==5 || z==6) ++r;
-           if(j=6 && c!=0) --c;
-           if(z==7) break;
-
-        }
 
 
         r=0;
