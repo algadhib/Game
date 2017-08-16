@@ -1,0 +1,23 @@
+
+
+.text-left{
+  color: #FFF4E8;
+  padding-left: 30px;
+}
+
+h1{
+  font-weight: bold;
+
+}
+
+img{
+  border-radius: 100px;
+  border: solid;
+  border-color: #6C949F;
+}
+
+.thumbnail{
+    border: 6px solid #A0BDC6;
+    border-radius: 30px;
+    background-color: #FFF4E8;
+}

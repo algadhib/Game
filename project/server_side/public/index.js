@@ -1,5 +1,5 @@
 
-
+/*
 function active(){
 
   var currentActive = document.querySelector('.active');
@@ -9,7 +9,7 @@ function active(){
   //event.currentTarget.classList.add('active');
 }
 document.querySelector('.nav').addEventListener('click', active);
-
+*/
 
 function loadtic (){
   var xhr = new XMLHttpRequest();
@@ -18,7 +18,7 @@ function loadtic (){
 
 
   }
-  xhr.open("GET", "tictaktoe", true);
+  xhr.open("GET", "/tictac", true);
   xhr.send(null);
 }
 
@@ -29,9 +29,37 @@ function loadconnect(){
 
 
   }
-  xhr.open("GET", "connected4", true);
+  xhr.open("GET", "/connected4", true);
   xhr.send(null);
 }
 
-document.getElementsByClassName('playtic')[0].addEventListener('click', loadtic);
-document.getElementsByClassName('playconnect')[0].addEventListener('click', loadconnect);
+//document.getElementsByClassName('playtic')[0].addEventListener('click', loadtic);
+//document.getElementsByClassName('playconnect')[0].addEventListener('click', loadconnect);
+
+
+//using ajax to use the buttons for login or signup
+document.getElementById('login-btn').addEventListener('click', function()  {
+   var xhr = new XMLHttpRequest();
+   var data = {};
+   data.userName = document.getElementById('userName').value;
+   data.password = document.getElementById('password').value;
+
+   xhr.open('post', "/login");
+   xhr.setRequestHeader("content-type", "application/json;charset=UTF-8");
+   xhr.send(JSON.stringify({  userName: data.userName,
+               password: data.password}));
+
+});
+
+document.getElementById('signup-btn').addEventListener('click', function()  {
+   var xhr = new XMLHttpRequest();
+   var data = {};
+   data.userName = document.getElementById('userName').value;
+   data.password = document.getElementById('password').value;
+
+   xhr.open('post', "/signup");
+   xhr.setRequestHeader("content-type", "application/json;charset=UTF-8");
+   xhr.send(JSON.stringify({  userName: data.userName,
+               password: data.password}));
+
+});

@@ -11,7 +11,7 @@ const app = express();
 // the uri for connecting to mongo
 // format: mongodb://user:password@host/database
 // **** CHANGE TO YOUR USER_NAME AND PASSWORD ********/
-var mongoUri = process.env.MONGO_URI || "mongodb://cs290_algadhim:cs290_algadhim@classmongo.engr.oregonstate.edu/cs290_algadhim";
+var mongoUri = process.env.MONGO_URI || "mongodb://cs290_algadhim:FinalProjectGame@classmongo.engr.oregonstate.edu/cs290_algadhim";
 // var mongoUri = "mongodb://localhost/test"; // for connecting to a locally running mongodb instance
 
 // connecting to the mongo database via mongoose
@@ -19,6 +19,8 @@ mongoose.connect(mongoUri);
 
 // used to parse the POST requests
 app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
+
 
 // init the view engine
 app.engine('handlebars', exphbs({defaultLayout: 'main.handlebars.html'}));
@@ -48,7 +50,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //serving the main page
 app.get('/', function(req, res, next)  {
    var context = {};             //create the contex obj
-   context.registered = true;
+   context.registered = false;
    context.showProfile = true;
    context.home = true;
    res.status(200);
@@ -56,15 +58,15 @@ app.get('/', function(req, res, next)  {
 });
 
 app.post('/signup', function(req, res)   {
-   console.log("post req");
+   console.log("post req signup");
    console.log(req.body.userName);
-   console.log(req.body.pwd);
+   console.log(req.body.password);
    res.redirect('/');
    //res.render('gamesList.handlebars', context);
 });
 
 app.post('/logout', function(req, res)   {
-   console.log("post req");
+   console.log("post req logout");
    console.log(req.body.userName);
    console.log(req.body.pwd);
    res.redirect('/');
@@ -72,11 +74,11 @@ app.post('/logout', function(req, res)   {
 });
 
 app.post('/login', function(req, res)   {
-   console.log("post req");
+   console.log("post req login");
    console.log(req.body.userName);
-   console.log(req.body.pwd);
+   console.log(req.body.password);
    res.redirect('/');
-   //res.render('gamesList.handlebars', context);
+   //res.render('gamesList.handlebsars', context);
 });
 
 //serving the main page
