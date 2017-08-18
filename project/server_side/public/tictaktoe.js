@@ -83,15 +83,12 @@ function AI(){
           buildBoard(x,y);
           checkWinner("X");
       }
-      else {
-        return ;
-      }
 count++;
   if(count == 9){
     alert("Game is over");
     return;
   }
-
+  /*AI turn*/
   if(count < 9 && checkWinner('X') == false && checkWinner('O') == false){
 do{
   var rand = Math.floor(Math.random() * 9);
@@ -143,7 +140,8 @@ function checkWinner(p){
             square[i].removeEventListener("click", addXO);
             square[i].removeEventListener("click", AI);
           }
-
+          addWinnerPoints(p);
+          return status;
         }
       counter =0;
       for(let j = 0; j < 3; j++)      // checking if player won (horizontally)
@@ -159,6 +157,8 @@ function checkWinner(p){
             square[i].removeEventListener("click", addXO);
             square[i].removeEventListener("click", AI);
           }
+          addWinnerPoints(p);
+          return status;
         }
   }
 
@@ -177,6 +177,8 @@ function checkWinner(p){
         square[i].removeEventListener("click", addXO);
         square[i].removeEventListener("click", AI);
       }
+      addWinnerPoints(p);
+      return status;
     }
   counter = 0;
   for(let i = 0; i < 3; i++)     //checking if player won (diagnaly)
@@ -190,9 +192,21 @@ function checkWinner(p){
       for(let i=0; i<9; i++)  {
         square[i].removeEventListener("click", addXO);
         square[i].removeEventListener("click", AI);
+
       }
+      addWinnerPoints(p);
+      return status;
 }
       return status;
+}
+
+function addWinnerPoints(p){
+    if(p=='X'){
+      var xhr = new XMLHttpRequest();
+      xhr.open("Post", "/score");
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.send("score=10");
+    }
 }
 
 function reset(){

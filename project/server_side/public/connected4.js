@@ -24,10 +24,10 @@ function buildBoard(x,y){
   console.log(x);
   console.log(y);
     if (count%2 == 0){
-    board[x][y] = "X"
+    board[x][y] = "blue"
   }
   else {
-    board[x][y] = "O"
+    board[x][y] = "red"
   }
   //console.log(board);
     for(var i=0; i<6; i++){
@@ -59,7 +59,7 @@ function addXO(){
 
           children[i].classList.add("blue");
           count++;
-          checkWinner('X');
+          checkWinner('blue');
           break;
         }
 
@@ -87,7 +87,7 @@ function addXO(){
           children[i].classList.add("red");
 
           count++;
-          checkWinner('O');
+          checkWinner('red');
           break;
         }
 
@@ -123,7 +123,7 @@ function AI(){
 
           children[i].classList.add("blue");
           count++;
-          checkWinner('X');
+          checkWinner('blue');
           break;
         }
 
@@ -158,7 +158,7 @@ function AI(){
 
           children[i].classList.add("red");
           count++;
-          checkWinner('O');
+          checkWinner('red');
           break;
         }
 
@@ -201,6 +201,7 @@ var r,c,i,j,z=0;
     /*check winner vertically*/
     for(let j=0; j<7; j++) {
        win = 0;
+       if(status != true){
        for(let i=0; i<6; i++)  {
         //  console.log('i: '+ i);
         //  console.log('j: '+ j);
@@ -215,13 +216,17 @@ var r,c,i,j,z=0;
                   square[i].removeEventListener("click", addXO);
                   square[i].removeEventListener("click", AI);
                 }
- 			break;
+                addWinnerPoints(p);
+                return status;
+
          }
      }
+   }
  }
       /*check winner horizontally*/
       for(let j=0; j<6; j++) {
          win = 0;
+        if(status != true){
          for(let i=0; i<7; i++)  {
           //  console.log('i: '+ i);
           //  console.log('j: '+ j);
@@ -236,9 +241,11 @@ var r,c,i,j,z=0;
                     square[i].removeEventListener("click", addXO);
                     square[i].removeEventListener("click", AI);
                   }
-   			break;
+                  addWinnerPoints(p);
+                  return status;
            }
        }
+     }
    }
 
 
@@ -259,8 +266,10 @@ var r,c,i,j,z=0;
               for(let i=0; i<42; i++)  {
                 square[i].removeEventListener("click", addXO);
                 square[i].removeEventListener("click", AI);
+
               }
-              break;
+              addWinnerPoints(p);
+              return status;
             }
             i++; j--;
 
@@ -273,6 +282,7 @@ var r,c,i,j,z=0;
         }
 
 
+/*Check diagnolly 2*/
 
         r=0;
         c=0,i=0,j=0,z=0;
@@ -280,8 +290,8 @@ var r,c,i,j,z=0;
            i=r; j=c; win=0;
            ++z;
            while(i<=5 && j<=6){
-             console.log('i: '+ i);
-             console.log('j: '+ j);
+            //  console.log('i: '+ i);
+            //  console.log('j: '+ j);
               if(board[i][j] == p)
                 win++;
              else win = 0;
@@ -291,9 +301,10 @@ var r,c,i,j,z=0;
             status = true;
             for(let i=0; i<42; i++)  {
               square[i].removeEventListener("click", addXO);
-              //square[i].removeEventListener("click", AI);
+              square[i].removeEventListener("click", AI);
             }
-     			break;
+            addWinnerPoints(p);
+            return status;
              }
               i++; j++;
 
@@ -312,7 +323,14 @@ var r,c,i,j,z=0;
 
 
 
-
+function addWinnerPoints(p){
+    if(p=='blue'){
+      var xhr = new XMLHttpRequest();
+      xhr.open("Post", "/score");
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.send("score=20");
+    }
+}
 
 
 

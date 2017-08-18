@@ -21,7 +21,8 @@ function loadtic (){
   xhr.open("GET", "/tictac", true);
   xhr.send(null);
 }
-
+//rewuiest w credintntial = true
+//set cookie on browser wi ajax
 function loadconnect(){
   var xhr = new XMLHttpRequest();
   if(xhr.readyState == 4 && this.status == 200){
@@ -38,18 +39,23 @@ function loadconnect(){
 
 
 //using ajax to use the buttons for login or signup
-document.getElementById('login-btn').addEventListener('click', function()  {
-   var xhr = new XMLHttpRequest();
-   var data = {};
-   data.userName = document.getElementById('userName').value;
-   data.password = document.getElementById('password').value;
-
-   xhr.open('post', "/login");
-   xhr.setRequestHeader("content-type", "application/json;charset=UTF-8");
-   xhr.send(JSON.stringify({  userName: data.userName,
-               password: data.password}));
-
-});
+// document.getElementById('login-btn').addEventListener('click', function()  {
+//    var xhr = new XMLHttpRequest();
+//    var data = {};
+//    data.userName = document.getElementById('userName').value;
+//    data.password = document.getElementById('password').value;
+//
+//    xhr.open('post', "/login");
+//    //xhr.setRequestHeader("content-type", "application/json;charset=UTF-8");
+//    //xhr.send(JSON.stringify({  userName: data.userName,
+//    //            password: data.password}));
+//    xhr.onload = function()  {    //check the status
+//       if(xhr.status == 200)   {
+//       }
+//    }
+//    xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+//    xhr.send("username=" + data.userName + "&password=" + data.password);
+// });
 
 document.getElementById('signup-btn').addEventListener('click', function()  {
    var xhr = new XMLHttpRequest();
@@ -57,9 +63,16 @@ document.getElementById('signup-btn').addEventListener('click', function()  {
    data.userName = document.getElementById('userName').value;
    data.password = document.getElementById('password').value;
 
+   xhr.onload = function()  {    //check the status
+      if(xhr.status == 500)   {
+         console.log("error registering");
+         alert("error registering");
+      }
+   }
    xhr.open('post', "/signup");
    xhr.setRequestHeader("content-type", "application/json;charset=UTF-8");
    xhr.send(JSON.stringify({  userName: data.userName,
                password: data.password}));
+
 
 });

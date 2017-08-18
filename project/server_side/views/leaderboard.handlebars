@@ -9,17 +9,11 @@
            </tr>
          </thead>
          <tbody>
+            {{#each username}}
            <tr>
-             <td>Example Exampliny</td>
-             <td>3000</td>
+             <td>{{this.username}}</td>
+             <td>{{this.score}}</td>
            </tr>
-           <tr>
-             <td>Bob Law</td>
-             <td>2000</td>
-           </tr>
-           <tr>
-             <td>Name Namado</td>
-             <td>1000</td>
-           </tr>
+            {{/each}}
          </tbody>
       </table>
