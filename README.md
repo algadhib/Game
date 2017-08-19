@@ -5,3 +5,10 @@ Group members:
 Mohammed Algadhib
 Mohammed Alawami
 Abdullah Al Bohalika
+
+
+to run the app:
+npm install
+npm start
+
+in your browser visit http://localhost:3000/
