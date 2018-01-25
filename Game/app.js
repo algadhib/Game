@@ -15,9 +15,9 @@ const app = express();
 // the uri for connecting to mongo
 // format: mongodb://user:password@host/database
 // **** CHANGE TO YOUR USER_NAME AND PASSWORD ********/
-var mongoUri = process.env.MONGO_URI || "mongodb://cs290_algadhim:FinalProjectGame@classmongo.engr.oregonstate.edu/cs290_algadhim";
+// var mongoUri = process.env.MONGO_URI || " mongodb://user:password@host/database";
 // var mongoUri = "mongodb://localhost/test"; // for connecting to a locally running mongodb instance
-
+// TODO: you need to put your mongodb remote data base address or create a local mongodb database 
 // connecting to the mongo database via mongoose
 mongoose.connect(mongoUri);
 
